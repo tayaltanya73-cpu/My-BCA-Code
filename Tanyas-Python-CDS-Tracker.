@@ -1,0 +1,57 @@
+def show_menu():
+    print("\n" + "="*30)
+    print("   TANYA'S PROGRESS DASHBOARD")
+    print("="*30)
+    print("1. 📚 Add a New CDS English Word")
+    print("2. 📖 View Vocabulary List")
+    print("3. 💻 Add a Coding Task")
+    print("4. 📝 View All Tasks")
+    print("5. 🏆 Show My Achievement")
+    print("6. 🚪 Exit")
+    print("="*30)
+
+# Initial Data
+vocabulary = ["Abstain from", "Abide by", "Acquitted of", "Accused of"]
+tasks = ["Setup GitHub Repo", "Master Python Loops", "Practice Prepositions"]
+
+def main():
+    while True:
+        show_menu()
+        choice = input("\nApna option chunein (1-6): ")
+
+        if choice == '1':
+            new_word = input("Naya word aur uska preposition likhein: ")
+            vocabulary.append(new_word)
+            print(f"✅ '{new_word}' ab aapki dictionary mein hai!")
+
+        elif choice == '2':
+            print("\n--- 📖 MY CDS VOCABULARY ---")
+            for index, word in enumerate(vocabulary, 1):
+                print(f"{index}. {word}")
+
+        elif choice == '3':
+            new_task = input("Naya coding task likhein: ")
+            tasks.append(new_task)
+            print("🚀 Task successfully added!")
+
+        elif choice == '4':
+            print("\n--- 📝 PENDING TASKS ---")
+            for i, task in enumerate(tasks, 1):
+                print(f"{i}. {task}")
+
+        elif choice == '5':
+            print("\n" + "⭐"*15)
+            print("HALL OF FAME: TANYA")
+            print("Latest Score: 100% (Mission Perfection)")
+            print("Status: Python & English Master")
+            print("⭐"*15)
+
+        elif choice == '6':
+            print("\nKeep pushing, Tanya! Hard work pays off. 🌟")
+            break
+        
+        else:
+            print("❌ Galat input! Kripya 1 se 6 ke beech chunein.")
+
+if __name__ == "__main__
+    main()
